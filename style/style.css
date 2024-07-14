@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+
+  --Font-p-tag: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+#main {
+  background-color: var(--Light-gray);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+#main .container {
+  background-color: var(--White);
+  width: 350px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.container .img_part {
+  width: 100%;
+}
+
+.img_part img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.container .title_part,
+.container .text_part {
+  text-align: center;
+  width: 90%;
+}
+
+.title_part h1 {
+  color: var(--Dark-blue);
+  font-size: 24px;
+}
+
+.container .text_part {
+  width: 80%;
+}
+
+.text_part p {
+  color: var(--Grayish-blue);
+  font-size: var(--Font-p-tag);
+}
+
+/* Footer Part */
+#footer small a {
+  text-decoration: none;
+  color: var(--Grayish-blue);
+  transition: 0.2s ease-in-out;
+}
+
+#footer small a:hover {
+  color: var(--Dark-blue);
+}
+
+/* Mobile Screen Viewers */
+@media (max-width: 800px) {
+  #main .container {
+    width: 85%;
+  }
+  .title_part h1 {
+    font-size: 20px;
+  }
+  .text_part p {
+    --Font-p-tag: 14px;
+  }
+}
